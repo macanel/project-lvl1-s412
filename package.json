@@ -1,10 +1,10 @@
 {
   "name": "braingamesmac",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "",
   "bin": {
-    "btain-games": "./dist/bin/brain-games.js"
+    "brain-games": "./dist/bin/brain-games.js"
   },
   "files": [
   "dist"
