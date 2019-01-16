@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../src/bin/brain-games.js"],"names":[],"mappings":"AAAA;;;AAEA;;;;AACA","sourcesContent":["#!/usr/bin/env node\n\nimport hello from '..';\nhello();\n"],"file":"brain-games.js"}
