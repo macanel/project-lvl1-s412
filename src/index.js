@@ -28,6 +28,6 @@ export const even = (maxNumberOfAnswers = 3) => {
       return;
     }
     console.log('Correct!');
-  };
+  }
   console.log(`Congratulations, ${usName}!`);
 };
