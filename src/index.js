@@ -12,15 +12,19 @@ export const userName = () => {
   return putName;
 };
 
+const maxNumberOfAnswers = 3;
+
 const getRandomNumber = (min = 0, max = 100) => Math.floor(Math.random() * (max - min + 1)) + min;
 
-export const even = (maxNumberOfAnswers = 3) => {
+const isEven = number => number % 2 === 0;
+
+export const even = () => {
+  console.log('Answer "yes" if number even otherwise answer "no".');
   const usName = userName();
-  const isEven = number => number % 2 === 0;
   for (let i = 1; i <= maxNumberOfAnswers; i += 1) {
-    const number = getRandomNumber();
-    console.log(`Question: ${number}`);
-    const correctAnswer = isEven(number) ? 'yes' : 'no';
+    const randomNumber = getRandomNumber();
+    console.log(`Question: ${randomNumber}`);
+    const correctAnswer = isEven(randomNumber) ? 'yes' : 'no';
     const userAnswer = readlineSync.question('Your answer: ');
     if (userAnswer !== correctAnswer) {
       console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was "${correctAnswer}"`);
