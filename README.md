@@ -4,4 +4,4 @@
 
 
 ## Game "Brain-even"
-[![asciicast](https://asciinema.org/a/RHI3uVmq6Uv4D08nI0wKiGSFV.svg)](https://asciinema.org/a/RHI3uVmq6Uv4D08nI0wKiGSFV)
+[![asciicast](https://asciinema.org/a/rf9xO641ceKW6K21c6xBeyvUb.svg)](https://asciinema.org/a/rf9xO641ceKW6K21c6xBeyvUb)
