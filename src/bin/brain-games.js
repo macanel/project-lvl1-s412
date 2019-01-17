@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
-import hello from '..';
+import hello, { userName } from '..';
 
 hello();
+userName();
