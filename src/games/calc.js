@@ -1,27 +1,25 @@
 import { cons } from 'hexlet-pairs';
 import { getRandomNumber, gameTemplate } from '..';
 
-const randomNumber1 = getRandomNumber(0, 50);
-const randomNumber2 = getRandomNumber(0, 50);
-const signSym = getRandomNumber(1, 3);
+const taskDescription = 'What is the result of the expression?';
 
 const calc = () => {
+  const randomNumber1 = getRandomNumber(0, 50);
+  const randomNumber2 = getRandomNumber(0, 50);
+  const signSym = getRandomNumber(1, 3);
   let correctAnswer = 0;
   let question = '';
-  switch (signSym) {
-    case 1:
-      correctAnswer = randomNumber1 + randomNumber2;
-      question = `${randomNumber1} + ${randomNumber2}`;
-      break;
-    case 2:
-      correctAnswer = randomNumber1 - randomNumber2;
-      question = `${randomNumber1} - ${randomNumber2}`;
-      break;
-    default:
-      correctAnswer = randomNumber1 * randomNumber2;
-      question = `${randomNumber1} * ${randomNumber2}`;
+  if (signSym === 1) {
+    correctAnswer = randomNumber1 + randomNumber2;
+    question = `${randomNumber1} + ${randomNumber2}`;
+  } else if (signSym === 2) {
+    correctAnswer = randomNumber1 - randomNumber2;
+    question = `${randomNumber1} - ${randomNumber2}`;
+  } else {
+    correctAnswer = randomNumber1 * randomNumber2;
+    question = `${randomNumber1} * ${randomNumber2}`;
   }
-
+  
   return cons(question, correctAnswer);
 };
-export default () => gameTemplate(calc, 'What is the result of the expression?');
+export default () => gameTemplate(calc, taskDescription);
