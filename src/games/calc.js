@@ -24,4 +24,4 @@ const calc = () => {
 
   return cons(question, correctAnswer);
 };
-gameTemplate(calc, 'What is the result of the expression?');
+export default () => gameTemplate(calc, 'What is the result of the expression?');
