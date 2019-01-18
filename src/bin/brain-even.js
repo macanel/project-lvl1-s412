@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 
-import hello, { even } from '..';
+import { even } from '..';
 
-hello();
 even();
