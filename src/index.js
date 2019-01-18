@@ -30,6 +30,28 @@ export const even = () => {
     const correctAnswer = isEven(randomNumber) ? 'yes' : 'no';
     const userAnswer = readlineSync.question('Your answer: ');
     if (userAnswer !== correctAnswer) {
+      console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was "${correctAnswer}".`);
+      console.log(`Let's try again, ${usName}!`);
+      return;
+    }
+    console.log('Correct!');
+  }
+  console.log(`Congratulations, ${usName}!`);
+};
+
+
+export const gameTemplate = (task, description) => {
+  console.log(hello(description));
+  const usName = userName();
+  console.log(`Hello, ${usName}!`);
+  for (let i = 1; i <= maxNumberOfAnswers; i += 1) {
+    const gameConditions = task();
+    console.log(task);
+    const taskString = car(gameConditions);
+    console.log(`Question: ${taskString}`);
+    const correctAnswer = String(cdr(gameConditions));
+    const userAnswer = readlineSync.question('Your answer: ');
+    if (userAnswer !== correctAnswer) {
       console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was "${correctAnswer}"`);
       console.log(`Let's try again, ${usName}!`);
       return;
