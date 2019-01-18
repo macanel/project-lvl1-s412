@@ -1,7 +1,7 @@
 import { car, cdr } from 'hexlet-pairs';
 import readlineSync from 'readline-sync';
 
-export default (description) => {
+const hello = (description) => {
   console.log('Welcome to the Brain Games!');
   if (description) {
     console.log(description);
@@ -21,7 +21,7 @@ const getRandomNumber = (min = 0, max = 100) => Math.floor(Math.random() * (max 
 const isEven = number => number % 2 === 0;
 
 export const even = () => {
-  console.log('Welcome to the Brain Games!');
+  console.log(hello('Welcome to the Brain Games!'));
   console.log('Answer "yes" if number even otherwise answer "no".');
   const usName = userName();
   for (let i = 1; i <= maxNumberOfAnswers; i += 1) {
@@ -39,8 +39,9 @@ export const even = () => {
   console.log(`Congratulations, ${usName}!`);
 };
 
-export const gameTemplate = (task) => {
-  const usName = readlineSync.question('May I have your name? ');
+export const gameTemplate = (task, description) => {
+  console.log(hello(description));
+  const usName = userName();
   console.log(`Hello, ${usName}!`);
   for (let i = 1; i <= maxNumberOfAnswers; i += 1) {
     const gameConditions = task();
@@ -58,4 +59,5 @@ export const gameTemplate = (task) => {
   console.log(`Congratulations, ${usName}!`);
 };
 
+export default hello;
 export { getRandomNumber };
