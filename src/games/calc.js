@@ -8,18 +8,18 @@ const calc = () => {
   const randomNumber2 = getRandomNumber(0, 50);
   const signSym = getRandomNumber(1, 3);
   let correctAnswer = 0;
-  let question = '';
+  let questionString = '';
   if (signSym === 1) {
     correctAnswer = randomNumber1 + randomNumber2;
-    question = `${randomNumber1} + ${randomNumber2}`;
+    questionString = `${randomNumber1} + ${randomNumber2}`;
   } else if (signSym === 2) {
     correctAnswer = randomNumber1 - randomNumber2;
-    question = `${randomNumber1} - ${randomNumber2}`;
+    questionString = `${randomNumber1} - ${randomNumber2}`;
   } else {
     correctAnswer = randomNumber1 * randomNumber2;
-    question = `${randomNumber1} * ${randomNumber2}`;
+    questionString = `${randomNumber1} * ${randomNumber2}`;
   }
 
-  return cons(question, correctAnswer);
+  return cons(questionString, correctAnswer);
 };
 export default () => gameTemplate(calc, taskDescription);
