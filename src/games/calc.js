@@ -19,7 +19,7 @@ const calc = () => {
     correctAnswer = randomNumber1 * randomNumber2;
     question = `${randomNumber1} * ${randomNumber2}`;
   }
-  
+
   return cons(question, correctAnswer);
 };
 export default () => gameTemplate(calc, taskDescription);
