@@ -16,9 +16,9 @@ const division = (number1, number2) => {
 const gcd = () => {
   const randomNumber1 = getRandomNumber(1, 100);
   const randomNumber2 = getRandomNumber(1, 100);
-  const questionString = `${randomNumber1} ${randomNumber2}`;
+  const question = `${randomNumber1} ${randomNumber2}`;
   const correctAnswer = String(division(randomNumber1, randomNumber2));
-  return cons(questionString, correctAnswer);
+  return cons(question, correctAnswer);
 };
 
 export default () => gameTemplate(gcd, taskDescription);
