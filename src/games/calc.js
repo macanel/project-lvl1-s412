@@ -8,7 +8,7 @@ const calc = () => {
   const randomNumber2 = getRandomNumber(0, 50);
   const signSym = getRandomNumber(1, 3);
   let correctAnswer = 0;
-  let questionString = '';
+  let question = '';
   if (signSym === 1) {
     correctAnswer = randomNumber1 + randomNumber2;
     question = `${randomNumber1} + ${randomNumber2}`;
@@ -20,6 +20,6 @@ const calc = () => {
     question = `${randomNumber1} * ${randomNumber2}`;
   }
 
-  return cons(questionString, correctAnswer);
+  return cons(question, correctAnswer);
 };
 export default () => gameTemplate(calc, taskDescription);
