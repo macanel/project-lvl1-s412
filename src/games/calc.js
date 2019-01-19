@@ -11,13 +11,13 @@ const calc = () => {
   let questionString = '';
   if (signSym === 1) {
     correctAnswer = randomNumber1 + randomNumber2;
-    questionString = `${randomNumber1} + ${randomNumber2}`;
+    question = `${randomNumber1} + ${randomNumber2}`;
   } else if (signSym === 2) {
     correctAnswer = randomNumber1 - randomNumber2;
-    questionString = `${randomNumber1} - ${randomNumber2}`;
+    question = `${randomNumber1} - ${randomNumber2}`;
   } else {
     correctAnswer = randomNumber1 * randomNumber2;
-    questionString = `${randomNumber1} * ${randomNumber2}`;
+    question = `${randomNumber1} * ${randomNumber2}`;
   }
 
   return cons(questionString, correctAnswer);
